@@ -52,6 +52,8 @@ This project explains fundamental concepts of:
 
 ```cpp
 pthread_join(thread, nullptr);
+```
+
 
 ##  Race Condition
 
@@ -61,7 +63,7 @@ A race condition occurs when multiple threads access shared data without proper 
 
 ```cpp
 sum += arr[i];
-
+```
 ##  Race Condition & Atomicity
 
 This operation is **not atomic**, because it consists of multiple steps:
@@ -82,7 +84,7 @@ A **mutex** is used to protect shared resources and prevent race conditions.
 
 ```c
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
-
+```
 pthread_mutex_lock(&mutex);
 sum += value;
 pthread_mutex_unlock(&mutex);
@@ -93,7 +95,7 @@ When the mutex is no longer needed, it should be properly destroyed:
 
 ```c
 pthread_mutex_destroy(&mutex);
-
+```
 ##  When to Use
 
 ###  Use Processes:
